@@ -1,0 +1,260 @@
+/* Navbar - fixed on top */
+.navbar {
+    position: fixed;       /* fix top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    background: linear-gradient(135deg, #a8c0ff, #fbc2eb);
+    color: black;
+    padding: 22px 25px;
+    z-index: 1000;
+    box-shadow: 0 5px 10px rgba(10, 9, 9, 0.2);
+    
+}
+
+.navbar .logo {
+    font-style: italic;
+    font-weight: bolder;
+    font-size: 40px;
+}
+
+/* Navbar links */
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;          /* space between buttons */
+    margin: 0;
+    padding: 0;
+}
+
+/* Common style for navbar buttons */
+.navbar .nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 25px;     /* bigger buttons */
+    border-radius: 8px;      /* rounded corners */
+    transition: 0.3s;
+    background: rgba(24, 62, 22, 0.856); /* subtle background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Hover effect */
+.navbar .nav-links li a:hover {
+    background: white;
+    color: #6a11cb;
+}
+
+/* Logout button special */
+.navbar .nav-links li a.logout {
+    background: #fa0909;
+}
+
+.navbar .nav-links li a.logout:hover {
+    background: #ff1a1a;
+    color: white;
+}
+
+
+/* Body */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url("images.png");
+    
+    background-position: center;
+    min-height: 100vh;
+    margin: 0;
+    padding-top: 120px;
+}
+
+/* Container for content */
+.container {
+    background: linear-gradient(135deg, #a8c0ff, #fbc2eb);
+    padding: 30px 30px;
+    border-radius: 12px;
+    box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
+    font-size:20px;
+    font-style: italic;
+    color: #221110;
+    
+}
+
+/* Add Employee Form Section */
+#add-employee {
+    margin-bottom: 20px;
+}
+
+#add-employee h3 {
+    margin-bottom: 20px;
+    font-size: 26px;
+    font-weight: bold;
+    color: #333;
+}
+
+#add-employee form {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+    width: 100%;
+    max-width: 600px;   
+    margin: auto;
+    background: rgba(255,255,255,0.9);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+#add-employee input {
+    padding: 14px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+}
+
+#add-employee input:focus {
+    border-color: #6a11cb;
+    box-shadow: 0 0 5px rgba(106,17,203,0.5);
+}
+
+#add-employee button {
+    padding: 14px;
+    font-size: 18px;
+    border: none;
+    background: #0e6e12;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#add-employee button:hover {
+    background: #2575fc;
+}
+
+/* Employee Table */
+#employee-list {
+    margin-top: 40px;
+    font-weight: bold;
+}
+
+#employee-list h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background: #430684;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #dac6e6;
+}
+
+tr:hover {
+    background-color: #ca6854;
+}
+.delete-btn {
+    background: #d2310d;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.delete-btn:hover {
+    background: #b22222;
+}
+/* Common Auth Box Style */
+#signup, #signin {
+    max-width: 400px;
+    margin: 40px auto;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    text-align: center;
+    
+}
+
+#signup h3, #signin h3 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+/*Form inside signup/signin */
+#signup form, #signin form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#signup input, #signin input {
+    padding: 14px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+}
+
+#signup input:focus, #signin input:focus {
+    border-color: #6a11cb;
+    box-shadow: 0 0 5px rgba(106,17,203,0.5);
+}
+
+/*Buttons */
+#signup button, #signin button {
+    padding: 14px;
+    font-size: 18px;
+    border: none;
+    background: linear-gradient(135deg, #0d7e31, #2575fc);
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#signup button:hover, #signin button:hover {
+    background: #2575fc;
+}
+
+.message {
+    color: #e81029;
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-size: 36px;
+    margin: 20px 0;
+    font-style: italic;
+    font-weight: bolder;
+}
